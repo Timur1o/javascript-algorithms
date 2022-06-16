@@ -11,7 +11,21 @@
 */
 
 function fizzBuzz(num) {
-    // Напишите код здесь
+    for (let i = 1; i <= num; i++) {
+        let result = '';
+        if(i % 3 === 0 || i % 5 === 0){
+            if (i % 3 === 0){
+                result += 'fizz'
+            }
+            if (i % 5 === 0){
+                result += 'buzz'
+            }
+        }else{
+            result = i;
+        }
+
+        console.log(result)
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -7,9 +7,26 @@
 */
 
 function primes(num) {
-    // Напишите код здесь
+    const result = [];
+    for(let i = 2; i <= num; i++){
+        if(isPrime(i)){
+            result.push(i);
+        }
+    }
+    return result;
 }
 
+function isPrime(n) {
+    if(n < 2){
+        return false;
+    }
+    for(let i = 2; i <= Math.sqrt(n); i++){
+        if(n % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(primes(6)); // [2, 3, 5]

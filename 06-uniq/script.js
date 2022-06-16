@@ -8,7 +8,11 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    const uniqs = arr.reduce((acc,curr)=>{
+        acc[curr] = curr;
+        return acc;
+    },{})
+    return Object.values(uniqs);
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

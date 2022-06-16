@@ -8,7 +8,11 @@
 */
 
 function intersection(arr1, arr2) {
-    // Напишите код здесь
+    const uniqs = arr1.filter(el=>arr2.includes(el)).reduce((acc,curr)=>{
+        acc[curr] = curr;
+        return acc;
+    },{})
+    return Object.values(uniqs);
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

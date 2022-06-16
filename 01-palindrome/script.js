@@ -14,7 +14,12 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    if(!str) {
+        return true
+    };
+  const refinedString = str.slice(0, 1).toLowerCase()+str.slice(1, -1)+str.slice(-1).toLowerCase();
+  const newString = refinedString.split('').reverse().join('');
+  return refinedString === newString
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

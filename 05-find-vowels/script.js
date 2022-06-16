@@ -8,9 +8,9 @@
  * ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'].
  *
 */
-
+const cirillicVowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
 function findVowels(str) {
-    // Напишите код здесь
+    return str.toLowerCase().split('').filter(letter => cirillicVowels.includes(letter)).length;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
